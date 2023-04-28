@@ -26,13 +26,9 @@ public class Jokenpo {
 
 		System.out.println("");
 
-		int escolhaComputador = aleatorio.nextInt(3);
+		int escolhaComputador = aleatorio.nextInt(3) + 1;
 		
-		if (escolhaComputador == 0) {
-
-			escolhaComputador = aleatorio.nextInt(3);
-
-		} else if (escolhaJogador == escolhaComputador) {
+		if (escolhaJogador == escolhaComputador) {
 
 			System.out.println("*****************************");
 			System.out.println("*******   EMPATE!!    *******");
@@ -56,11 +52,39 @@ public class Jokenpo {
 			System.out.println("******* VOCÊ VENCEU!  *******");
 			System.out.println("*****************************");
 
-		} else if (escolhaJogador == 2) {
+		} else if (escolhaJogador == 2 && escolhaComputador == 1) {
 			System.out.println("Você escolheu ----> PAPEL!");
+			System.out.println("O computador escolheu ----> PEDRA!");
+			System.out.println("");
+			System.out.println("*****************************");
+			System.out.println("******* VOCÊ VENCEU!  *******");
+			System.out.println("*****************************");
 
-		} else {
+		} else if (escolhaJogador == 2 && escolhaComputador == 3){
+			System.out.println("Você escolheu ----> PAPEL!");
+			System.out.println("O computador escolheu ----> TESOURA!");
+			System.out.println("");
+			System.out.println("*****************************");
+			System.out.println("*******   QUE PENA    *******");
+			System.out.println("******* VOCÊ PERDEU!  *******");
+			System.out.println("*****************************");
+			
+		} else if (escolhaJogador == 3 && escolhaComputador == 1) {
 			System.out.println("Você escolheu ----> TESOURA!");
+			System.out.println("O computador escolheu ----> PEDRA!");
+			System.out.println("");
+			System.out.println("*****************************");
+			System.out.println("*******   QUE PENA    *******");
+			System.out.println("******* VOCÊ PERDEU!  *******");
+			System.out.println("*****************************");
+			
+		}else {
+			System.out.println("Você escolheu ----> TESOURA!");
+			System.out.println("O computador escolheu ----> PAPEL!");
+			System.out.println("");
+			System.out.println("*****************************");
+			System.out.println("******* VOCÊ VENCEU!  *******");
+			System.out.println("*****************************");
 		}
 
 	}
